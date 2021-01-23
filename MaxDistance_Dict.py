@@ -52,3 +52,33 @@ for index in range(0, len(inputlist)):
 
 print(maxIndex)
 print (dict)
+
+
+'''
+Suggested Solution
+#input has been taken for you
+import ast
+input_list= ast.literal_eval(input())
+
+#start writing your code from here
+#we will make a dictionary with keys as the elements of the list
+#and values as a list of the indices of occurances of the the elements
+
+d={}
+for i in range(len(input_list)):
+    if input_list[i] in d:
+        d[input_list[i]].append(i)
+    else:
+        d[input_list[i]]=[i]
+
+#now we just find the difference of first and last element of all the lists in d.values()
+#the maximum difference will be out answer
+answer=0
+
+for v in d.values():
+    difference=v[-1] - v[0]
+    if difference > answer:
+        answer=difference
+
+print(answer)
+'''
