@@ -81,5 +81,4 @@ for v in d.values():
         answer=difference
 
 print(answer)
-
 '''
